@@ -1,0 +1,24 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+  postgres:
+    image: 'postgres:latest'
+    environment:
+      - 'POSTGRES_DB=smart-contracts'
+      - 'POSTGRES_PASSWORD: admin'
+      - 'POSTGRES_USER=admin'
+    ports:
+      - '5432:5432'
+  ganache:
+    image: trufflesuite/ganache
+    ports:
+      - "8545:8545"
+
+
+
+
+
