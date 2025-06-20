@@ -1,11 +1,12 @@
 package com.devleofulco.smartassets.cross.enums;
 
+import com.devleofulco.smartassets.cross.enums.base.BaseEnum;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public enum TipoPartyEnum {
+public enum TipoPartyEnum implements BaseEnum<Long> {
     INDIVIDUAL(1L, "Pessoa Física"),
     COMPANHIA(2L, "Pessoa Jurídica"),
     GOVERNAMENTAL(3L, "Orgão Público"),
@@ -14,12 +15,8 @@ public enum TipoPartyEnum {
     private Long id;
     private String descricao;
 
-    public static TipoPartyEnum fromId(Long id) {
-        for (TipoPartyEnum type : values()) {
-            if (type.getId().equals(id)) {
-                return type;
-            }
-        }
-        return null;
+    @Override
+    public String getDescription() {
+        return "";
     }
 }

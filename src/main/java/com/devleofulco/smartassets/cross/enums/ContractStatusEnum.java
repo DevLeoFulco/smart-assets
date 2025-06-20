@@ -1,11 +1,12 @@
 package com.devleofulco.smartassets.cross.enums;
 
+import com.devleofulco.smartassets.cross.enums.base.BaseEnum;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public enum ContractStatusEnum {
+public enum ContractStatusEnum implements BaseEnum<Long> {
     DRAFT(1L, "Rascunho"),
     ACTIVE(2L, "Ativo"),
     FULFILLED(3L, "Cumprido"),
@@ -15,12 +16,8 @@ public enum ContractStatusEnum {
     private final Long id;
     private final String descricao;
 
-    public static ContractStatusEnum fromId(Long id) {
-        for (ContractStatusEnum status : values()) {
-            if (status.getId().equals(id)) {
-                return status;
-            }
-        }
-        return null;
+    @Override
+    public String getDescription() {
+        return "";
     }
 }

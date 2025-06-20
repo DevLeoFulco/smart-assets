@@ -1,24 +1,14 @@
 package com.devleofulco.smartassets.cross.enums.converters;
 
 import com.devleofulco.smartassets.cross.enums.TipoPartyEnum;
+import com.devleofulco.smartassets.cross.enums.base.BaseEnumConverter;
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;
 
 @Converter(autoApply = true)
-public class TipoPartyEnumConverter implements AttributeConverter<TipoPartyEnum, Long> {
-    @Override
-    public Long convertToDatabaseColumn(TipoPartyEnum enumObj) {
-        if (enumObj == null) {
-            return null;
-        }
-        return enumObj.getId();
+public class TipoPartyEnumConverter extends BaseEnumConverter<TipoPartyEnum, Long> {
+    public TipoPartyEnumConverter() {
+        super(TipoPartyEnum.class);
     }
 
-    @Override
-    public TipoPartyEnum convertToEntityAttribute(Long id) {
-        if (id == null) {
-            return null;
-        }
-        return TipoPartyEnum.fromId(id);
-    }
 }
