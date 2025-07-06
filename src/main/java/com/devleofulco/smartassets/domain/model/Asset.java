@@ -23,4 +23,5 @@ public class Asset {
     private LocalDate dataDeAquisicao;
     private Map<String, Object> metadata;
     private AssetStatusEnum status;
+    private String localizacao;
 }
