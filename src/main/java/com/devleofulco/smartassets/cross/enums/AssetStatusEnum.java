@@ -9,11 +9,22 @@ import lombok.Getter;
 public enum AssetStatusEnum implements BaseEnum<Long> {
     ACTIVE(1L, "Ativo"),
     ARCHIVED(2L, "Arquivado"),
-    UNDER_MAINTENANCE(3L, "Em Manutenção"),
-    DISPOSED(4L, "Descartado");
+    TOKENIZED(3L, "Tokenizado"),
+    UNDER_MAINTENANCE(4L, "Em Manutenção"),
+    DISPOSED(5L, "Descartado");
 
     private final Long id;
     private final String descricao;
+
+    AssetStatusEnum(Long id, String descricao) {
+        this.id = id;
+        this.descricao = descricao;
+    }
+
+    @Override
+    public Long getId() {
+        return id;
+    }
 
     @Override
     public String getDescription() {

@@ -15,6 +15,16 @@ public enum ClauseTriggerTypeEnum implements BaseEnum<Long> {
     private final Long id;
     private final String descricao;
 
+    ClauseTriggerTypeEnum(Long id, String descricao) {
+        this.id = id;
+        this.descricao = descricao;
+    }
+
+    @Override
+    public Long getId() {
+        return id;
+    }
+
     @Override
     public String getDescription() {
         return "";

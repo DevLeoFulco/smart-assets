@@ -16,7 +16,7 @@ import java.util.Map;
 @Setter
 @AllArgsConstructor
 public class Asset {
-    private final AssetId id;
+    private AssetId id;
     private String nome;
     private String descricao;
     private AssetTypeEnum tipo;

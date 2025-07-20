@@ -16,6 +16,16 @@ public enum ContractStatusEnum implements BaseEnum<Long> {
     private final Long id;
     private final String descricao;
 
+    ContractStatusEnum(Long id, String descricao) {
+        this.id = id;
+        this.descricao = descricao;
+    }
+
+    @Override
+    public Long getId() {
+        return id;
+    }
+
     @Override
     public String getDescription() {
         return "";

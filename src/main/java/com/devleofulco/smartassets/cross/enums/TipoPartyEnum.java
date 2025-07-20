@@ -15,6 +15,16 @@ public enum TipoPartyEnum implements BaseEnum<Long> {
     private Long id;
     private String descricao;
 
+    TipoPartyEnum(Long id, String descricao) {
+        this.id = id;
+        this.descricao = descricao;
+    }
+
+    @Override
+    public Long getId() {
+        return id;
+    }
+
     @Override
     public String getDescription() {
         return "";
