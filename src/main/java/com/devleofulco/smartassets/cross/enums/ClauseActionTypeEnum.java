@@ -1,11 +1,12 @@
 package com.devleofulco.smartassets.cross.enums;
 
+import com.devleofulco.smartassets.cross.enums.base.BaseEnum;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public enum ClauseActionTypeEnum {
+public enum ClauseActionTypeEnum implements BaseEnum<Long> {
     NOTOFICATION(1L, "ENviar Notificação"),
     PAYMENT(2L, "Efetuar Pagamento"),
     PENALTY(3L, "Aplicar Multa"),
@@ -15,12 +16,18 @@ public enum ClauseActionTypeEnum {
     private final Long id;
     private final String descricao;
 
-    public static ClauseActionTypeEnum fromId(Long id) {
-        for (ClauseActionTypeEnum type : values()) {
-            if (type.getId().equals(id)) {
-                return type;
-            }
-        }
-        return null;
+    ClauseActionTypeEnum(Long id, String descricao) {
+        this.id = id;
+        this.descricao = descricao;
+    }
+
+    @Override
+    public Long getId() {
+        return id;
+    }
+
+    @Override
+    public String getDescription() {
+        return "";
     }
 }

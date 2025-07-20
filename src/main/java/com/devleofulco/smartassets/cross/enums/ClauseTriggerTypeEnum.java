@@ -1,11 +1,12 @@
 package com.devleofulco.smartassets.cross.enums;
 
+import com.devleofulco.smartassets.cross.enums.base.BaseEnum;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public enum ClauseTriggerTypeEnum {
+public enum ClauseTriggerTypeEnum implements BaseEnum<Long> {
     TEMPORAL(1L, "Disparo Temporal"),
     EVENT(2L, "Disparo de Evento"),
     CONDITIONAL(3L, "Disparo Condicional"),
@@ -14,12 +15,18 @@ public enum ClauseTriggerTypeEnum {
     private final Long id;
     private final String descricao;
 
-    public static ClauseTriggerTypeEnum fromId(Long id) {
-        for (ClauseTriggerTypeEnum type : values()) {
-            if (type.getId().equals(id)) {
-                return type;
-            }
-        }
-        return null;
+    ClauseTriggerTypeEnum(Long id, String descricao) {
+        this.id = id;
+        this.descricao = descricao;
+    }
+
+    @Override
+    public Long getId() {
+        return id;
+    }
+
+    @Override
+    public String getDescription() {
+        return "";
     }
 }

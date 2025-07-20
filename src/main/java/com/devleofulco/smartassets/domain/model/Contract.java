@@ -13,7 +13,7 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 public class Contract {
-    private final ContractId id;
+    private ContractId id;
     private String titulo;
     private List<ContractParty> parties;
     private List<ContractClause> clauses;
