@@ -1,7 +1,6 @@
 package com.devleofulco.smartassets.infra.jpa.entity;
 
 import com.devleofulco.smartassets.cross.enums.AssetTypeEnum;
-import com.devleofulco.smartassets.cross.enums.converters.AssetTypeConverter;
 import com.devleofulco.smartassets.domain.model.records.AssetId;
 import jakarta.persistence.*;
 import lombok.Getter;
