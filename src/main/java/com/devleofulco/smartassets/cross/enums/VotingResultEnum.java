@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
-@AllArgsConstructor
 public enum VotingResultEnum implements BaseEnum<Long> {
     APPROVED(1L, "Aprovado"),
     REJECTED(2L, "Rejeitado"),

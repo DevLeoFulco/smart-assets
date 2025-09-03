@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
-@AllArgsConstructor
 public enum DocumentTypeEnum implements BaseEnum<Long> {
     DRAFT(1L, "Rascunho"),
     FINAL(2L, "Final"),

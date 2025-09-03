@@ -1,7 +1,9 @@
 package com.devleofulco.smartassets.cross.enums;
 
 import com.devleofulco.smartassets.cross.enums.base.BaseEnum;
+import lombok.Getter;
 
+@Getter
 public enum VotingTypeEnum implements BaseEnum<Long> {
     MULTIPLE_CHOICE(1L, "Multipla escolha"),
     YES_NO(2L, "Sim ou não"),

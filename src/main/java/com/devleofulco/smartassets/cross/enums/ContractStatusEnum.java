@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
-@AllArgsConstructor
 public enum ContractStatusEnum implements BaseEnum<Long> {
     DRAFT(1L, "Rascunho"),
     ACTIVE(2L, "Ativo"),

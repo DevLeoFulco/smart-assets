@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
-@AllArgsConstructor
 public enum AssetTypeEnum implements BaseEnum<Long> {
     EQUIPMENTO(1L, "Equipamento"),
     IMOVEL_DIGITAL(2L, "Imóvel"),

@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
-@AllArgsConstructor
 public enum ClauseActionTypeEnum implements BaseEnum<Long> {
     NOTOFICATION(1L, "ENviar Notificação"),
     PAYMENT(2L, "Efetuar Pagamento"),

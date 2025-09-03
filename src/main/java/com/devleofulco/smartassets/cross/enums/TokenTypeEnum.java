@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
-@AllArgsConstructor
 public enum TokenTypeEnum implements BaseEnum<Long> {
     UTILITY(1L, "Utilidade"),
     SECURITY(2L, "Segurança"),

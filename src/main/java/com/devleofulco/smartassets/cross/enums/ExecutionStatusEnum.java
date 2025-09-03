@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
-@AllArgsConstructor
 public enum ExecutionStatusEnum implements BaseEnum<Long> {
     PENDING(1L, "Pendente"),
     IN_PROGRESS(2L, "Em Progresso"),
