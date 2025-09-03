@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
-@AllArgsConstructor
 public enum AssetStatusEnum implements BaseEnum<Long> {
     ACTIVE(1L, "Ativo"),
     ARCHIVED(2L, "Arquivado"),

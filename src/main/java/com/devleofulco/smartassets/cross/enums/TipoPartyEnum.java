@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
-@AllArgsConstructor
 public enum TipoPartyEnum implements BaseEnum<Long> {
     INDIVIDUAL(1L, "Pessoa Física"),
     COMPANHIA(2L, "Pessoa Jurídica"),

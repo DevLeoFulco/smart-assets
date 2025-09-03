@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
-@AllArgsConstructor
 public enum UserRoleEnum implements BaseEnum<Long> {
     ADMIN(1L, "Administrador"),
     USER(2L, "Usuário"),

@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
-@AllArgsConstructor
 public enum ClauseTriggerTypeEnum implements BaseEnum<Long> {
     TEMPORAL(1L, "Disparo Temporal"),
     EVENT(2L, "Disparo de Evento"),
